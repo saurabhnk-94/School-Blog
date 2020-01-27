@@ -1,0 +1,81 @@
+.form-details {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
+    padding: 10px;
+    background-color: bisque;
+}
+
+.form-box label {
+    font-size: 20px;
+}
+
+.form-bottom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.signup-body {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: 40vw;
+    margin-top: 20vh;
+    background-color: bisque;
+}
+
+.signup-body label {
+    font-size: 20px;
+}
+
+.signup-body div {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.input-box {
+    width: 500px;
+    height: 50px;
+    border: none;
+    border: 2px solid blue;
+    padding-left: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.posting {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.posting input {
+    width: 50%;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.posting div {
+    font-size: 20px;
+    margin-top: 10px;
+    color: blue;
+}
+
+.buttonfield {
+    width: 20%;
+}
