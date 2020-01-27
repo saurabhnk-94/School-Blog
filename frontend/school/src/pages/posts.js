@@ -12,34 +12,37 @@ class Posts extends React.Component {
     this.handlesubmit=this.handlesubmit.bind(this);
   }
   componentDidMount() {
-    axios.get("http://demo7128039.mockable.io/posts")
-      .then(res => this.setState({posts: res.data}) )
+    axios.get("http://127.0.0.1:8000/posts/")
+      .then(res => this.setState({posts: res.data}))
+
+      .catch(err => console.log("Error didmount:", err))
   }
 
-  handlesubmit() {
-    console.log("handling post", this.state)
-    axios.post("http://demo7128039.mockable.io/posts", {
-      posts: [...this.state, {
-        title: this.state.title,
-        body:this.state.description
-      }]  
-    })
+  handlesubmit(title, post) {
+    console.log("title:", title, "post:", post);
+    axios.post("http://127.0.0.1:8000/posts/", {
+        title,
+        post
+  })
+  .then(res => console.log("Result post:", res.data))
+  .catch(err => console.log("Error posting", err))
   }
 
   render() {
     const postItems = this.state.posts
-    .filter(items => items.id <= 10)
     .map((items, index) => (
       <div key={index}>
-        <h3> {items.title} </h3> <p> {items.body} </p>{" "}
+        <h3> {items.title} </h3> <p> {items.post} </p>{" "}
       </div>
     ));
+    
     return (
       <div>
         <h1> 
           Posts 
         </h1> 
         <div className="posting">
+          {console.log("Feteched posts :", this.state.posts)}
           <h2>Wanna Post Anything!</h2>
           <div>Title:</div>
           <input type="text" 
@@ -49,13 +52,14 @@ class Posts extends React.Component {
           <div>Description:</div>
           <input type="text" 
             placeholder="Short Description"
-            value={this.state.description}
+            value={this.state.body}
             onChange={(event) => this.setState({body: event.target.value})}
             />
-          <input type="button" value="POST" onClick={this.handlesubmit}/>
+          <input type="button" value="POST" onClick={() => this.handlesubmit(this.state.title, this.state.body)}/>
         </div>
-        {postItems}{" "}
-
+        <div style={{border: "2px solid black", padding:"10px"}}>
+         {postItems}{" "}
+        </div>
       </div>
     );
   }

@@ -4,4 +4,4 @@ from .models import Posts
 # Register your models here.
 @admin.register(Posts)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'post')
+    list_display = ('title', 'post',)
