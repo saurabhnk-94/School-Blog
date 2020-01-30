@@ -6,7 +6,7 @@ I have also included for concept of post that is, Post is been retrieved from th
 To run this project:
 Clone the repository
 ```
-https://github.com/saurabhnk-94/school-library.git
+https://github.com/saurabhnk-94/School-Blog.git
 ```
 Setting up your virtual environment:
 ```
@@ -16,11 +16,11 @@ Activate the Virtual Environment:
 ```
 source .env/bin/activate
 ```
-After all these steps go to the backend directory(school-library/backend) and there you can find a file called requirement.txt and then type the following code in your terminal:
+After all these steps go to the backend directory(School-Blog/backend) and there you can find a file called requirement.txt and then type the following code in your terminal:
 ```
 pip3 install -r requirements.txt
 ```
-Then to run the server, go to the directory 'school-library/backend/authentication/' and type the following code in terminal :
+Then to run the server, go to the directory 'School-Blog/backend/authentication/' and type the following code in terminal :
 ```
 python3 manage.py runserver
 ```
@@ -40,7 +40,7 @@ For Frontend which is ReactJS, Dependencies are:
 
 Kindly note redux is not implemented.
 
-Go to 'school-library/frontend/school/' and type the following code in the terminal:
+Go to 'School-Blog/frontend/school/' and type the following code in the terminal:
 ```
 npm install
 ```
